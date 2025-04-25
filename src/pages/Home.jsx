@@ -26,7 +26,7 @@ const Home = () => {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:5001/products/getProducts/${userId}`
+        `https://full-stack-mern-app-backend.vercel.app/products/getProducts/${userId}`
       );
       setProducts(res.data.Products || []);
     } catch (err) {
@@ -53,7 +53,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/products/delete/${id}`);
+      await axios.delete(`https://full-stack-mern-app-backend.vercel.app/products/delete/${id}`);
       getProducts(Auth?.user?._id);
     } catch (err) {
       console.error("Error deleting product:", err.message);
