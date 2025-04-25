@@ -45,7 +45,7 @@ const AddModel = ({ show, handleClose, handleUpload, editProduct, userId }) => {
 
       if (editProduct) {
         response = await axios.put(
-          `http://localhost:5001/products/update/${editProduct._id}`,
+          `https://full-stack-mern-app-backend.vercel.app/products/update/${editProduct._id}`,
           {
             ...formData,
             userId,
@@ -54,7 +54,7 @@ const AddModel = ({ show, handleClose, handleUpload, editProduct, userId }) => {
         console.log("✅ Product updated:", response.data);
       } else {
         response = await axios.post(
-          `http://localhost:5001/products/create/${userId}`,
+          `https://full-stack-mern-app-backend.vercel.app/products/create/${userId}`,
           {
             ...formData,
           }
