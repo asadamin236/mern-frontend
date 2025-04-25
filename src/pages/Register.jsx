@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5001/auth/register",
+        "https://full-stack-mern-app-backend.vercel.app/auth/register",
         value
       );
       console.log("Registration Successful:", response.data);
